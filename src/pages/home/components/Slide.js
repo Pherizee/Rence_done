@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Slide = styled.div`
-  height: 98vh;
+  height: 110vh;
 
   .slide-container {
     display: flex;
@@ -9,8 +9,15 @@ const Slide = styled.div`
 
     & > div {
       position: relative;
-      width: 50%;
       height: 100%;
+    }
+
+    & .message {
+      width: 46%;
+    }
+
+    & .image {
+      width: 54%;
     }
   }
 
@@ -21,7 +28,7 @@ const Slide = styled.div`
       position: absolute;
       left: 50%;
       bottom: 0;
-      width: 75%;
+      width: 90%;
       transform: translateX(-50%);
     }
   }
@@ -56,12 +63,15 @@ const Slide = styled.div`
   }
 
   @media only screen and (max-width: 50em) {
+    height: 100vh;
+
     .slide-container {
       flex-direction: column;
 
-      & > div {
+      & .message,
+      & .image {
         width: 100%;
-        height: 60vh;
+        height: 50%;
       }
 
       .message {
@@ -74,7 +84,7 @@ const Slide = styled.div`
 
       .slide-heading {
         position: absolute;
-        top: 8%;
+        top: 9%;
         left: 50%;
         width: 10ch;
         text-align: center;

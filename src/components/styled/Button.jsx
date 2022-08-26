@@ -110,7 +110,7 @@ export const IconBtn = styled.button`
 
 export const SliderArrow = styled.button`
   position: absolute;
-  left: 50%;
+  left: 46%;
   top: 50%;
   display: grid;
   place-items: center;
@@ -130,6 +130,7 @@ export const SliderArrow = styled.button`
   @media only screen and (max-width: 50em) {
     width: 40px;
     top: 68%;
+    left: 50%;
 
     svg {
       font-size: 24px;
