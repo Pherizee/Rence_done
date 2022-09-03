@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 1em;
+  padding-block: 2em;
   z-index: 5;
 
   & > div {

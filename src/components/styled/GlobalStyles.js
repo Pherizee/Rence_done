@@ -44,7 +44,8 @@ ol[role="list"] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -53,6 +54,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
   z-index: 1;
 }
 

@@ -19,10 +19,12 @@ const Header = () => {
   const openNav = () => {
     setIsNavOpen(true);
     document.body.classList.add("lock-scroll");
+    document.documentElement.classList.add("lock-scroll");
   };
   const closeNav = () => {
     setIsNavOpen(false);
     document.body.classList.remove("lock-scroll");
+    document.documentElement.classList.remove("lock-scroll");
   };
 
   return (
