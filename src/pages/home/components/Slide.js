@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Slide = styled.div`
-  height: 110vh;
+  height: 105vh;
 
   .slide-container {
     display: flex;
@@ -11,30 +11,24 @@ const Slide = styled.div`
       position: relative;
       height: 100%;
     }
-
-    & .message {
-      width: 46%;
-    }
-
-    & .image {
-      width: 54%;
-    }
   }
 
   .image {
+    width: 54%;
     background-color: #ffd9eb;
 
     img {
       position: absolute;
       left: 50%;
       bottom: 0;
-      width: 90%;
+      width: 70%;
       transform: translateX(-50%);
     }
   }
 
   .message {
     background-color: #fed21721;
+    width: 46%;
 
     .info {
       display: flex;
@@ -42,18 +36,20 @@ const Slide = styled.div`
       justify-content: center;
       max-width: min(calc(100% - 16px), 600px);
       height: 100%;
+      max-width: 552px;
       margin-left: auto;
       padding-top: 80px;
     }
 
     .slide-heading {
-      max-width: 75%;
+      max-width: 15ch;
       margin-bottom: 1rem;
     }
 
     .download-links {
       h2 {
         margin-bottom: 10px;
+        font-weight: 700;
       }
 
       button {

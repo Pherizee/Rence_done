@@ -20,9 +20,10 @@ export const StyledHeader = styled.header`
 
 export const Logo = styled.div`
   margin-right: auto;
+  max-width: 64px;
 
   @media only screen and (max-width: 50em) {
-    max-width: 80px;
+    max-width: 74px;
   }
 `;
 
