@@ -1,11 +1,16 @@
+import { createGlobalStyle } from "styled-components";
+import CamptonBold from "../../assets/fonts/Campton-BoldDEMO.otf";
+import CamptonLight from "../../assets/fonts/Campton-LightDEMO.otf";
+
+const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: Campton-Bold;
-  src: url("./assets/fonts/Campton-BoldDEMO.otf");
+  src: url(${CamptonBold});
 }
 
 @font-face {
   font-family: Campton-Light;
-  src: url("./assets/fonts/Campton-LightDEMO.otf");
+  src: url(${CamptonLight});
 }
 
 /* CSS RESETS */
@@ -92,21 +97,21 @@ a {
   --clr-accent: #fed217;
 
   /* font sizes */
-  --ff-size-300: 14px;
-  --ff-size-400: 16px;
-  --ff-size-700: 30px;
-  --ff-size-900: 40px;
+  --fs-300: 14px;
+  --fs-400: 16px;
+  --fs-700: 30px;
+  --fs-900: 40px;
 
-  --ff-size-btn: var(--ff-size-300);
+  --fs-btn: var(--fs-300);
 }
 
 /* desktop sizes */
 @media only screen and (min-width: 50em) {
   :root {
-    --ff-size-300: 16px;
-    --ff-size-400: 18px;
-    --ff-size-500: 24px;
-    --ff-size-900: 64px;
+    --fs-300: 16px;
+    --fs-400: 18px;
+    --fs-500: 24px;
+    --fs-900: 64px;
   }
 }
 /* GLOBAL STYLES */
@@ -132,3 +137,7 @@ body {
 .lock-scroll {
   overflow: hidden;
 }
+
+`;
+
+export default GlobalStyles;

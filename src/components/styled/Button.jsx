@@ -7,7 +7,7 @@ const PriBtn = styled.button`
   justify-content: space-around;
   padding: 16px 30px;
   font-family: "Campton-Light", sans-serif;
-  font-size: var(--ff-size-btn);
+  font-size: var(--fs-btn);
   background-color: #222;
   color: #fff;
   border: none;
@@ -76,7 +76,7 @@ export const SecondaryBtn = styled.button`
   justify-content: space-around;
   padding: 16px 30px;
   font-family: "Campton-Light", sans-serif;
-  font-size: var(--ff-size-btn);
+  font-size: var(--fs-btn);
   background-color: #fff;
   color: #222;
   border: 15px solid #000;
