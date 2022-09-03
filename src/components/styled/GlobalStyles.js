@@ -103,8 +103,6 @@ a {
   --fs-400: 16px;
   --fs-700: 30px;
   --fs-900: 40px;
-
-  --fs-btn: var(--fs-300);
 }
 
 /* desktop sizes */
@@ -113,6 +111,7 @@ a {
     --fs-300: 16px;
     --fs-400: 18px;
     --fs-500: 24px;
+    --fs-700: 60px;
     --fs-900: 64px;
   }
 }
@@ -120,6 +119,10 @@ a {
 
 body {
   font-family: "Campton-Light", sans-serif;
+}
+
+h1, h2, h3, h4, strong {
+  font-family: "Campton-Bold", sans-serif;
 }
 
 .slick-arrow.slick-next {

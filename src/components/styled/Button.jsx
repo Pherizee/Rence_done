@@ -7,7 +7,7 @@ const PriBtn = styled.button`
   justify-content: space-around;
   padding: 16px 30px;
   font-family: "Campton-Light", sans-serif;
-  font-size: var(--fs-btn);
+  font-size: var(--fs-300);
   background-color: #222;
   color: #fff;
   border: none;
