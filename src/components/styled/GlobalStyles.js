@@ -45,8 +45,14 @@ ol[role="list"] {
 
 /* Set core root defaults */
 html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  &:focus-within{
+    scroll-behavior: smooth;
+
+  }
+
+  @media only screen and (max-width: 50em) {
+    overflow-x: scroll;
+  }
 }
 
 /* Set core body defaults */
@@ -92,6 +98,7 @@ a {
 :root {
   /* colors */
   --clr-neutral-100: #fff;
+  --clr-neutral-300: #fff9e1;
   --clr-neutral-700: #333;
   --clr-neutral-900: #000;
 
@@ -101,7 +108,8 @@ a {
   /* font sizes */
   --fs-300: 14px;
   --fs-400: 16px;
-  --fs-700: 30px;
+  --fs-500: 20px;
+  --fs-700: 28px;
   --fs-900: 40px;
 }
 
@@ -110,7 +118,7 @@ a {
   :root {
     --fs-300: 16px;
     --fs-400: 18px;
-    --fs-500: 24px;
+    --fs-500: 32px;
     --fs-700: 60px;
     --fs-900: 64px;
   }
