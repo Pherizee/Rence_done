@@ -3,6 +3,7 @@ import CamptonBold from "../../assets/fonts/Campton-BoldDEMO.otf";
 import CamptonLight from "../../assets/fonts/Campton-LightDEMO.otf";
 
 const GlobalStyles = createGlobalStyle`
+/* Font Faces */
 @font-face {
   font-family: Campton-Bold;
   src: url(${CamptonBold});
@@ -109,7 +110,8 @@ a {
   --fs-300: 14px;
   --fs-400: 16px;
   --fs-500: 20px;
-  --fs-700: 28px;
+  --fs-600: 30px;
+  --fs-700: 30px;
   --fs-900: 40px;
 }
 
@@ -117,8 +119,9 @@ a {
 @media only screen and (min-width: 50em) {
   :root {
     --fs-300: 16px;
-    --fs-400: 18px;
+    --fs-400: 20px;
     --fs-500: 32px;
+    --fs-600: 50px;
     --fs-700: 60px;
     --fs-900: 64px;
   }
@@ -149,6 +152,20 @@ h1, h2, h3, h4, strong {
 
 .lock-scroll {
   overflow: hidden;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+.download-links button {
+  width: 280px;
 }
 
 `;

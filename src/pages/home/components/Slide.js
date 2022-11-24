@@ -34,11 +34,12 @@ const Slide = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: min(calc(100% - 16px), 600px);
+      /* max-width: min(calc(100% - 16px), 600px); */
       height: 100%;
-      max-width: 552px;
+      max-width: 616px;
       margin-left: auto;
       padding-top: 80px;
+      padding-inline: 32px;
     }
 
     .slide-heading {
@@ -91,6 +92,7 @@ const Slide = styled.div`
       .download-links {
         position: absolute;
         top: 147%;
+        left: 0;
         width: 100%;
         text-align: center;
         z-index: 2;

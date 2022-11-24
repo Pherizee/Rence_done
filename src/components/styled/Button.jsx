@@ -5,10 +5,13 @@ const PriBtn = styled.button`
   display: flex;
   width: max-content;
   justify-content: space-around;
+  align-items: center;
   padding: 16px 30px;
+  border-radius: ${({ bRad }) => bRad};
   font-family: "Campton-Light", sans-serif;
-  font-size: var(--fs-300);
-  background-color: #222;
+  font-size: ${({ fs }) => fs || "var(--fs-300)"};
+  background-color: ${({ bgClr }) => bgClr || "#222"};
+  box-shadow: 0px 2.25132px 11.8194px 1.12566px rgba(55, 48, 144, 0.53);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -20,51 +23,14 @@ const PriBtn = styled.button`
   }
 
   span {
-    transform: translateY(2px);
-    pointer-events: none;
-  }
-
-  span.ripple {
-    position: absolute;
-    background: #fff;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    border-radius: 50%;
-    animation: animate 700ms linear forwards;
-  }
-
-  @keyframes animate {
-    0% {
-      width: 0;
-      height: 0;
-      opacity: 0.5;
-    }
-    100% {
-      width: 500px;
-      height: 500px;
-      opacity: 0;
-    }
+    position: relative;
+    translate: 0 3px;
   }
 `;
 
-export const PrimaryBtn = ({ text, icon }) => {
-  const rippleAnim = (e) => {
-    let x = e.clientX - e.target.offsetLeft;
-    let y = e.clientY - e.target.offsetTop;
-
-    let ripples = document.createElement("span");
-    ripples.setAttribute("class", "ripple");
-    ripples.style.left = x + "px";
-    ripples.style.top = y + "px";
-    e.target.appendChild(ripples);
-
-    setTimeout(() => {
-      ripples.remove();
-    }, 700);
-  };
-
+export const PrimaryBtn = ({ text, icon, fs, bRad, bgClr }) => {
   return (
-    <PriBtn onClick={rippleAnim}>
+    <PriBtn fs={fs} bRad={bRad} bgClr={bgClr}>
       {icon && <img src={icon} alt="" />}
       {<span>{text}</span>}
     </PriBtn>
@@ -75,11 +41,11 @@ export const SecondaryBtn = styled.button`
   display: flex;
   justify-content: space-around;
   padding: 16px 30px;
-  font-family: "Campton-Light", sans-serif;
-  font-size: var(--fs-btn);
+  font-family: "Campton-Bold", sans-serif;
+  font-size: 20px;
   background-color: #fff;
   color: #222;
-  border: 15px solid #000;
+  border: 8px solid #000;
   cursor: pointer;
 
   img {
@@ -88,24 +54,21 @@ export const SecondaryBtn = styled.button`
 
   span {
     transform: translateY(5px);
+  }
+
+  @media only screen and (min-width: 50em) {
+    border: 15px solid #000;
   }
 `;
 
 export const IconBtn = styled.button`
-  display: flex;
-  justify-content: space-around;
-  padding: 4px;
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-
-  img {
-    margin-right: 1rem;
-  }
-
-  span {
-    transform: translateY(5px);
-  }
+  display: grid;
+  place-items: center;
+  width: ${({ width }) => width};
+  height: ${({ width }) => width};
+  border: ${({ border }) => border || "none"};
+  border-radius: ${({ bRad }) => bRad};
+  background-color: ${({ bgClr }) => bgClr};
 `;
 
 export const SliderArrow = styled.button`
