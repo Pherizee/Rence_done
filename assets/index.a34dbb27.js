@@ -1012,14 +1012,21 @@ h1, h2, h3, h4, strong {
   background-color: #f2eae8;
 `,K1=Y.div`
   & > div {
+    position: relative;
     margin-bottom: 1.5rem;
     padding: 4rem 2rem;
     background-color: #fff;
+    transform-origin: bottom;
 
     &:hover {
-      scale: 1.08;
+      scale: 1.06;
       transition: 300ms;
       box-shadow: 4.94003px 16.3021px 38.0383px -11.3621px rgba(0, 0, 0, 0.3);
+
+      &::before {
+        opacity: 1;
+        transition: 300ms;
+      }
     }
 
     &::before {
@@ -1034,6 +1041,7 @@ h1, h2, h3, h4, strong {
       background-repeat: no-repeat;
       background-size: cover;
       transform: translateX(-50%);
+      opacity: 0;
     }
   }
 
